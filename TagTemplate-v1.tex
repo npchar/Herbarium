@@ -1,0 +1,56 @@
+\documentclass[a4paper, landscape, 11pt]{article}
+\usepackage[T1]{fontenc}
+%\usepackage[''paramètre'']{inputenc}
+\usepackage{graphicx}
+\usepackage{SIunits}
+\usepackage{wasysym}
+\usepackage{fullpage}
+\usepackage{array}
+\usepackage{tracefnt}
+\usepackage[frenchb]{babel}
+\usepackage{eurosym}
+\usepackage{ifthen}
+
+% Where informations is stored
+\input{SampleInformations}
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{flushright}{\large \bf \texttt{\Planche}}\end{flushright}
+\noindent
+{\huge \bf \FamilleBotanique} \hspace{0.2cm}
+{\large {\it \LinneanName} (\Descripteur)}\hspace{0.2cm}
+{\large \NomCommuns}\\
+
+\vspace{0.8cm}
+ \ifthenelse{ \equal{\MajCarte}{true} }{
+ \noindent
+  \includegraphics[width = 14cm]{\sampleMapsPanel}\\
+}\\
+
+{\small
+\vspace{0.4cm}
+\begin{minipage}{10cm}
+\noindent
+{\bf Date de récolte :} \DateRecolte \\
+{\bf Collecteur(s) :} \Collecteurs \\
+{\bf Identification :} \Identification \\
+{\bf Lieux de récolte :} \AdresseRecolte \\
+{\bf Longitude / Latitude (DD) :} \coordDD \\
+{\bf Altitude :} \Altitude \\
+{\bf Description du lieux de récolte :}\\
+\DescriptionMilieu \\
+{\bf Notes : }
+\Notes
+\\
+
+\vspace{0.1cm}
+\noindent
+
+ \end{minipage}
+ 
+
+ 
+
+ 
+\end{document}
