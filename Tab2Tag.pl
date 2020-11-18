@@ -14,7 +14,7 @@ my $TexTemplate = "TagTemplate-v1.tex";
 
 my $usage = "Usage: $0 -i <CSV formated tab> -p <Planche name> \n\n";
 $usage .= "Description:  Create fancy Tag from information stored in a Tab delimited tabular. It's based on 'Planche', which could abrit several samples.\n\n";
-$usage .= "Requirement:  Need LaTeX, and R, as well as some R packages (see below) installed. Requires also a properly configured internet connexion.\n";
+$usage .= "Requirement:  Need LaTeX, and R, as well as some R packages installed (see below). Requires also a properly configured internet connexion.\n";
 $usage .= "              R dependencies: optparse, ggmap, magick. Folder should contain the TeX template (path or template could be changed throught -t option)\n\n";
 $usage .= "Arguments:    -i   <CSV formated tab> Input db formated as CSV (tab delimited)\n";
 $usage .= "              -p   <Planche> Name of the object to process\n";
@@ -145,7 +145,7 @@ print $OUT '\def\NomCommuns{'.$SampleInformation{'NomCommuns'}.'}'."\n" ;
 print $OUT '\def\DateRecolte{'.$SampleInformation{'Date'}.'}'."\n" ;
 print $OUT '\def\NumRecolte{'.$SampleInformation{'SampleName'}.'}'."\n" ;
 print $OUT '\def\AdresseRecolte{'.$SampleInformation{'Adresse'}.',  '.$SampleInformation{'Ville'}.', '.$SampleInformation{'Pays'}.'}'."\n" ;
-print $OUT '\def\coordDD{'.$SampleInformation{'Lon'}.' / '.$SampleInformation{'Lon'}.'}'."\n" ;
+print $OUT '\def\coordDD{'.$SampleInformation{'Lon'}.' / '.$SampleInformation{'Lat'}.'}'."\n" ;
 print $OUT '\def\Altitude{'.$SampleInformation{'Altitude'}.'m}'."\n" ;
 print $OUT '\def\DescriptionMilieu{'.$SampleInformation{'Description'}.'}'."\n" ;
 print $OUT '\def\Notes{'.$SampleInformation{'Notes'}.'}'."\n" ;
