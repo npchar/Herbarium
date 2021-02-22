@@ -7,9 +7,9 @@ library(magick)
 option_list = list(
   make_option(c("-s", "--sample"), type="character", default=NULL,
               help="Name of the sample, used as basename for the resulting maps files"),
-  make_option(c("-a", "--latitude"), type="character", default=NULL,
+  make_option(c("-a", "--latitude"), type="double", default=NULL,
               help="Latitude as Decimal Degree"),
-  make_option(c("-o", "--longitude"), type="character", default=NULL,
+  make_option(c("-o", "--longitude"), type="double", default=NULL,
               help="Longitude as Decimal Degree"),
   make_option(c("-v", "--vertical"), action="store_true", default=FALSE,
         help="Create a map pannel vertically [default is horizontal]")
