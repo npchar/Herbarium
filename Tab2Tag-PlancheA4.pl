@@ -116,7 +116,7 @@ close $IN ;
 ### ii. Calling R
 ###---------------
 print "\./$Rscript -a $SampleInformation{'Lat'} -o $SampleInformation{'Lon'} -s Base\n";
-system("\./$Rscript -a $SampleInformation{'Lat'} -o $SampleInformation{'Lon'} -s Base") ;
+system("Rscript $Rscript -a $SampleInformation{'Lat'} -o $SampleInformation{'Lon'} -s Base") ;
 
 ### iii. Preparing LaTeX
 ###----------------------
@@ -261,7 +261,7 @@ sub DescriptionsTemplateCreation {
 	$DescriptionsTemplateContent .= '\begin{document}'."\n" ;
 	$DescriptionsTemplateContent .= '\pagenumbering{gobble}'."\n" ;
 	$DescriptionsTemplateContent .= ''."\n" ;
-	$DescriptionsTemplateContent .= '\begin{minipage}{8cm}'."\n" ;
+	$DescriptionsTemplateContent .= '\begin{minipage}{10cm}'."\n" ;
 	$DescriptionsTemplateContent .= '\noindent'."\n" ;
 	$DescriptionsTemplateContent .= '{\bf Date de récolte :} \DateRecolte \\\\ '."\n" ;
 	$DescriptionsTemplateContent .= '{\bf Collecte :} \Collecteurs \\\\ '."\n" ;
